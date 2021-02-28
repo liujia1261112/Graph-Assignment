@@ -1,0 +1,17 @@
+GraphType.UNDIRECTED
+Num Vertices = 7
+Num Edges    = 24
+1 Fanouts: 2,3,4
+1 FanIns: 2,3,4
+2 Fanouts: 1,4,5
+2 FanIns: 1,4,5
+3 Fanouts: 1,4,6
+3 FanIns: 1,4,6
+4 Fanouts: 1,2,3,5,6,7
+4 FanIns: 1,2,3,5,6,7
+5 Fanouts: 2,4,7
+5 FanIns: 2,4,7
+6 Fanouts: 3,4,7
+6 FanIns: 3,4,7
+7 Fanouts: 4,5,6
+7 FanIns: 4,5,6

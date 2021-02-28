@@ -31,7 +31,7 @@ class GraphTest{
 		int v = g.numV() ;
 		g.writeGraphAsDotFile(f);
 		if (v < 25) {
-			GraphInputOutputDir.dot2pdf(GraphInputOutputDir.outputFileBase + name);
+//			GraphInputOutputDir.dot2pdf(GraphInputOutputDir.outputFileBase + name);
 		}
 		if (v != enodes) {
 			System.out.println("The graph has " + enodes + " Nodes. But you are telling " + v + " Nodes") ;

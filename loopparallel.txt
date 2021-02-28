@@ -1,0 +1,11 @@
+GraphType.WEIGHTED_DIRECTED
+Num Vertices = 4
+Num Edges    = 3
+s Fanouts: 0
+s FanIns: NONE
+0 Fanouts: 1
+0 FanIns: s
+1 Fanouts: t
+1 FanIns: 0
+t Fanouts: NONE
+t FanIns: 1

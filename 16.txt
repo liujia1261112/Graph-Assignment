@@ -1,0 +1,13 @@
+GraphType.WEIGHTED_DIRECTED
+Num Vertices = 5
+Num Edges    = 6
+A Fanouts: C,D
+A FanIns: B,E
+C Fanouts: D,B
+C FanIns: A
+D Fanouts: NONE
+D FanIns: A,C
+B Fanouts: A
+B FanIns: C
+E Fanouts: A
+E FanIns: NONE

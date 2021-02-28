@@ -1,0 +1,15 @@
+GraphType.DIRECTED
+Num Vertices = 6
+Num Edges    = 7
+Bar Fanouts: Bat
+Bar FanIns: Car
+Bat Fanouts: NONE
+Bat FanIns: Bar,Mat,Cat
+Cab Fanouts: Car,Cat
+Cab FanIns: NONE
+Car Fanouts: Bar
+Car FanIns: Cab
+Mat Fanouts: Bat
+Mat FanIns: Cat
+Cat Fanouts: Bat,Mat
+Cat FanIns: Cab

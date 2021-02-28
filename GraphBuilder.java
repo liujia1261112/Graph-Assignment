@@ -78,13 +78,17 @@ class GraphBuilder {
                         Node node1=g.getNode(g.io.insertOrFind(s1,true));
                         Node node2=g.getNode(g.io.insertOrFind(s2,true));
 
+                        if (s1.equals(s2))  continue;
+
                         if (g.type== GraphType.Type.DIRECTED||g.type== GraphType.Type.WEIGHTED_DIRECTED){
                             g.createEdge(node1,node2,w,true);
                             g.createEdge(node2,node1,w,false);
                         }
                         if (g.type== GraphType.Type.UNDIRECTED||g.type== GraphType.Type.WEIGHTED_UNDIRECTED){
                             g.createEdge(node1,node2,w,true);
+                            g.createEdge(node1,node2,w,false);
                             g.createEdge(node2,node1,w,true);
+                            g.createEdge(node2,node1,w,false);
                         }
                     }
                 }

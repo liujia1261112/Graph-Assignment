@@ -1,0 +1,15 @@
+GraphType.WEIGHTED_UNDIRECTED
+Num Vertices = 6
+Num Edges    = 20
+1 Fanouts: 2,3,4
+1 FanIns: 2,3,4
+2 Fanouts: 1,3,5
+2 FanIns: 1,3,5
+3 Fanouts: 1,2,4,5,6
+3 FanIns: 1,2,4,5,6
+4 Fanouts: 1,3,6
+4 FanIns: 1,3,6
+5 Fanouts: 2,3,6
+5 FanIns: 2,3,6
+6 Fanouts: 3,4,5
+6 FanIns: 3,4,5

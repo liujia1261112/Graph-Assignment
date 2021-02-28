@@ -1,0 +1,15 @@
+GraphType.DIRECTED
+Num Vertices = 6
+Num Edges    = 6
+A Fanouts: B
+A FanIns: NONE
+B Fanouts: C
+B FanIns: A,D
+E Fanouts: F,D
+E FanIns: C
+F Fanouts: NONE
+F FanIns: E
+D Fanouts: B
+D FanIns: E
+C Fanouts: E
+C FanIns: B
