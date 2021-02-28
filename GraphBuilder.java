@@ -2,6 +2,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * File Name: GraphBuilder.java
@@ -12,6 +14,7 @@ import java.io.IOException;
 
 class GraphBuilder {
     private Graph g;
+    private Set<String> set=new HashSet<>();
     //You can have any number of private variables
 
     GraphBuilder(Graph g, String f) throws FileNotFoundException {
@@ -58,7 +61,32 @@ class GraphBuilder {
                     /******************************************************************
                      WRITE YOUR CODE BELOW
                      ******************************************************************/
+                    if (s.length == 3 || s.length == 2) {
+                        String s1=s[0];
+                        String s2=s[1];
+                        double w=0;
+                        if (s.length==3) w=Double.valueOf(s[2]);
 
+                        if (set.add(s1)){
+                            g.buildNodeIfNotExistAndAppend(set.size()-1);
+                            g.io.insertOrFind(s1,false);
+                        }
+                        if (set.add(s2)){
+                            g.buildNodeIfNotExistAndAppend(set.size()-1);
+                            g.io.insertOrFind(s2,false);
+                        }
+                        Node node1=g.getNode(g.io.insertOrFind(s1,true));
+                        Node node2=g.getNode(g.io.insertOrFind(s2,true));
+
+                        if (g.type== GraphType.Type.DIRECTED||g.type== GraphType.Type.WEIGHTED_DIRECTED){
+                            g.createEdge(node1,node2,w,true);
+                            g.createEdge(node2,node1,w,false);
+                        }
+                        if (g.type== GraphType.Type.UNDIRECTED||g.type== GraphType.Type.WEIGHTED_UNDIRECTED){
+                            g.createEdge(node1,node2,w,true);
+                            g.createEdge(node2,node1,w,true);
+                        }
+                    }
                 }
 
 
